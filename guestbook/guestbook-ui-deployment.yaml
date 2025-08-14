@@ -2,6 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: guestbook-ui
+  annotations:
+    # Custom health check that always reports unhealthy
+    argocd.argoproj.io/health: |
+      hs = {}
+      hs.status = "Progressing"
+      hs.message = "Custom health check - always progressing"
+      return hs
 spec:
   replicas: 1
   revisionHistoryLimit: 3
