@@ -17,9 +17,4 @@ metadata:
           name: guestbook-ui
           ports:
             - containerPort: 80
-         readinessProbe:
-          httpGet:
-            path: /nonexistent-health-check
-            port: 80
-          initialDelaySeconds: 5
-          periodSeconds: 10
+          command: ['sh', '-c', 'echo "This job always fails" && exit 1']
