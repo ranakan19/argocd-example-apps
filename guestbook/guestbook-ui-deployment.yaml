@@ -19,4 +19,4 @@ spec:
           ports:
             - containerPort: 80
           command: ['/bin/sh']
-          args: ["-c", "sleep 15"]
+          args: ["-c", "sleep 30"]
