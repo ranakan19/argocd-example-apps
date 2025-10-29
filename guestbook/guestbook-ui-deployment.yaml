@@ -18,5 +18,5 @@ spec:
           name: guestbook-ui
           ports:
             - containerPort: 80
-          command: ['/bin/sh']
-          args: ["-c", "sleep 600"]
+          command: ["sleep"]
+          args: ["600"]
