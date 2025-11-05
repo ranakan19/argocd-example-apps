@@ -17,5 +17,4 @@ spec:
         - image: quay.io/argoprojlabs/argocd-e2e-container:0.2
           name: guestbook-ui
           ports:
-            - containerPort: 80
-          command: ['sh', '-c', 'echo "This job always fails" && exit 1'] 
+            - containerPort: 80 
