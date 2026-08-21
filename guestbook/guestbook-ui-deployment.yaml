@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: guestbook-ui
 spec:
-  replicas: 5
+  replicas: 3
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -18,3 +18,4 @@ spec:
           name: guestbook-ui
           ports:
             - containerPort: 80 
+          command: ['sh', '-c', 'echo "This job always fails" && exit 1'] 
